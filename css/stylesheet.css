@@ -1,0 +1,161 @@
+body{
+    background-color: black;
+    font-family: 'Fira Sans', sans-serif; /*Google font*/
+}
+
+.galleryTop{
+    max-width: 1000px;
+    min-height: 360px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 10px;
+    /*margin-bottom: -200px;*/
+    padding-bottom: 50px;
+    border-radius: 30px;
+    
+}
+
+.galleryTop h2{
+    text-align: center;
+    font-size: 3em;
+    padding-top: 10px;
+}
+
+.galleryTop p{
+    max-width: 500px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25px;
+}
+
+
+.exGallery{
+	max-width: 1300px;
+	margin: 0 auto;
+	display: table;
+}
+
+.row{
+	display: table-row;
+}
+
+.exGallery .box{
+	height: 250px;
+	width: 250px;
+	border: 2px black solid;
+	list-style: none;
+	float: left;
+	position: static;
+	background-color: grey;
+	display: table-cell;
+
+}
+.box {
+  width: 100px;
+    -webkit-transition: width 2s; /* Safari 3.1 to 6.0 */
+    transition: width 2s
+}
+
+.box:hover {
+  -webkit-transform: scale(1.5,1.5);
+     -moz-transform: scale(1.5,1.5);
+       -o-transform: scale(1.5,1.5);
+      -ms-transform: scale(1.5,1.5);
+          transform: scale(1.5,1.5);
+}
+
+img{
+	width: 250px;
+	height: 250px;
+}
+
+/*----The following code for the Fancybox modal is from Fancybox.net or https://github.com/fancyapps/fancyBox ----*/
+
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption { 
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.2s;
+    animation-name: zoom;
+    animation-duration: 0.2s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/*----  ./fancybox code ----*/
